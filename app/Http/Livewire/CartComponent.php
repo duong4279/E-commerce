@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use Cart;
+use Illuminate\Support\Facades\Auth;
 
 class CartComponent extends Component
 {
@@ -29,8 +30,38 @@ class CartComponent extends Component
     {
         Cart::destroy();
     }
+
+
+    public function checkout()
+    {
+        if(Auth::check())
+        {
+            return redirect()->route('product.checkout');
+        }
+        else 
+        {
+            return redirect()->route('login');
+        }
+    }
+
+
+    public function setAmountForCheckout()
+    {
+        if(!Cart::count() > 0) 
+        {
+            session()->forget('checkout');
+            return;
+        }
+        session()->put('checkout',[
+            'subtotal' => Cart::subtotal(),
+            'total' => Cart::total()
+        ]);
+    }
+        
+
     public function render()
     {
+         $this->setAmountForCheckout();
         return view('livewire.cart-component')-> layout('layouts.base');
     }
 }

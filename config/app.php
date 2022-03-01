@@ -236,7 +236,6 @@ return [
         'Auth' => Illuminate\Support\Facades\Auth::class,
         'Cart' => Gloudeman\Shoppingcart\Facade\Cart::class,
 
-
     ],
 
 ];

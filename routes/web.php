@@ -8,6 +8,7 @@ use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\SearchComponent;
+use App\Http\Livewire\CheckoutSuccessComponent;
 
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminCategoryComponent;
@@ -47,6 +48,7 @@ Route::get('checkout/', CheckoutComponent::class)->name('product.checkout');
 Route::get('/product/{slug}', DetailsComponent::class)->name('product.details');
 Route::get('/category/{category_slug}', CategoryComponent::class)->name('product.category');
 Route::get('/search', SearchComponent::class)->name('product.search');
+Route::get('/checkout-success', CheckoutSuccessComponent::class)->name('checkout.success');
 
 
 

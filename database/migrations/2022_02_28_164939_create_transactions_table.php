@@ -18,6 +18,7 @@ class CreateTransactionsTable extends Migration
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('order_id')->unsigned();
             $table->enum('status',['pending','approved','declined','refunded'])->default('pending');
+            $table->enum('mode',['cod','card','paypal']);
             $table->timestamps();
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

@@ -47,7 +47,9 @@
                 @endforeach											
             </ul>
             @else
-            <p>No item in cart</p>
+            <div class="text-center" style="padding:30px 0;">
+            <h1>No item in cart</h1>
+            </div>
             @endif
         </div>
 
@@ -55,12 +57,11 @@
             <div class="order-summary">
                 <h4 class="title-box">Thông tin đơn hàng</h4>
                 <p class="summary-info"><span class="title">Tổng tiền hàng</span><b class="index">{{Cart::subtotal()}}</b></p>
-                <p class="summary-info"><span class="title">VAT</span><b class="index">{{Cart::tax()}}</b></p>
                 <p class="summary-info"><span class="title">Phí vận chuyển</span><b class="index">Miễn phí vận chuyển</b></p>
                 <p class="summary-info total-info "><span class="title">Thành tiền</span><b class="index">{{Cart::total()}}</b></p>
             </div>
             <div class="checkout-info">
-                <a style=" width: 20%;float: right; border-radius: 20px;"class="btn btn-checkout" href="checkout.html">Check out</a>
+                <a style=" width: 20%;float: right; border-radius: 20px;"class="btn btn-checkout" href="#" wire:click.prevent="checkout">Thanh toán</a>
             </div>
         </div>
 

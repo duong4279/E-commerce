@@ -5025,9 +5025,9 @@ table.shop_attributes tbody{
     display: inline-block;
 }
 .payment-method .choose-payment-methods{
-    border-top: 1px solid #e6e6e6;
+    /* border-top: 1px solid #e6e6e6;
     margin-top: 13px;
-    padding-top: 12px;
+    padding-top: 12px; */
 }
 .shipping-method .summary-info + h4.title-box{
     margin-top: 34px;
