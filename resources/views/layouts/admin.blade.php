@@ -126,14 +126,14 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('admin.homecategories') }}"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
                                 aria-expanded="false">
                                 <i class="fas fa-tasks" aria-hidden="true"></i>
                                 <span class="hide-menu">Quản lý danh mục trang chủ</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="map-google.html"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('admin.orders') }}"
                                 aria-expanded="false">
                                 <i class="fas fa-clipboard-list" aria-hidden="true"></i>
                                 <span class="hide-menu">Đơn hàng</span>

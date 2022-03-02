@@ -110,12 +110,8 @@
                         <input name="payment-method" id="payment-method-visa" value="card" type="radio" wire:model="paymentmode">
                         <span>Thẻ ngân hàng</span>
                         <span class="payment-desc">Chuyển khoản </span>
-                    </label>
-                    <label class="payment-method">
-                        <input name="payment-method" id="payment-method-paypal" value="paypal" type="radio" wire:model="paymentmode">
-                        <span>Paypal</span>
-                        <span class="payment-desc">Chọn thanh toán bằng Thẻ ngân hàng</span>
-                        <span class="payment-desc">nếu không có tài khoản paypal</span>
+                        <span class="payment-desc">Tên chủ tài khoản : NONG THI DUONG </span>
+                        <span class="payment-desc">Số tài khoản: XXXX XXXX XXXX </span>
                     </label>
                     @error('paymentmode') <p class="text-danger">{{$message}}</p>@enderror
                 </div>

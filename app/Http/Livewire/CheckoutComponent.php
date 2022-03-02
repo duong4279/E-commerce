@@ -98,6 +98,15 @@ class CheckoutComponent extends Component
             $transaction->status = 'pending';
             $transaction->save();
         }
+        else if($this->paymentmode == 'card')
+        {
+            $transaction = new Transaction();
+            $transaction->order_id = $order->id;
+            $transaction->user_id = Auth::user()->id;
+            $transaction->mode = 'card';
+            $transaction->status = 'pending';
+            $transaction->save();
+        }
 
         $this->success=1;
         Cart::destroy();
